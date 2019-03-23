@@ -1,0 +1,73 @@
+// Variables
+$gray: #191919;
+$gray-lighter: lighten($gray, 12);
+$gray-light: lighten($gray, 5);
+$gray-dark: darken($gray, 3);
+$black: #000;
+$white: #fff;
+$border-radius: 5px;
+$ui-radius: 4px;
+$font-size: 15px;
+$primary: #0063d6;
+$transition-speed: 500ms;
+
+// Base components
+.app {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+  overflow: hidden;
+  overflow-y: auto;
+  background: rgba($gray, .5);
+}
+
+// Mixins
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin button-generator($background, $font) {
+  color: $font;
+  background-color: $background;
+  border: 0;
+
+  &:active {
+    color: lighten($font, 20);
+    background-color: darken($background, 5);
+  }
+}
+
+.button {
+  position: relative;
+  display: inline-block;
+  padding: 8px 15px;
+  line-height: 1;
+  font-size: $font-size;
+  user-select: none;
+  border-radius: $border-radius;
+  appearance: none;
+  outline: none;
+  box-shadow: 0 2px 1px rgba($black, .1),
+              inset 0 1px 0 rgba($white, .1);
+}
+
+.button-default {
+  @include button-generator($gray, lighten($gray-light, 25));
+}
+
+.button-primary {
+  @include button-generator($primary, lighten($primary, 25));
+}
+
+// Responsive
+$small: 400px;
+$medium: 1024px;
+$large: 1200px;
+$xl: 1400px;

@@ -1,0 +1,16 @@
+{
+  "name": "cameo-mac",
+  "version": "0.0.0",
+  "description": "Trakt.tv client for OSX",
+  "main": "./dist/main.js",
+  "dependencies": {
+    "ajax-request": "^1.2.1",
+    "electron-debug": "^1.1.0",
+    "image-downloader": "^3.0.0",
+    "vue": "^2.2.6",
+    "vue-electron": "^1.0.6",
+    "vue-router": "^2.1.2"
+  },
+  "devDependencies": {},
+  "author": "Falko Joseph <falkojoseph@gmail.com>"
+}
